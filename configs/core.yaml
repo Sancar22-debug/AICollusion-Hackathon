@@ -1,0 +1,17 @@
+# Core Experimental Grid: 2 Incentives x 3 Communication/Oversight Regimes x 2 Framings = 12 Cells
+experiment: "dual_key_dispatch_core_v2.1"
+rounds_per_episode: 5
+units_per_agent: 5
+unilateral_penalty: 20.0
+prior_compromised: 0.25
+noise_profile: "low"
+dev_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+test_seeds: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+
+cells:
+  - {code: "A1", incentive: "aligned",     alpha: 0.00, regime: "no_chat",          framings: ["crisis", "routine"]}
+  - {code: "A2", incentive: "aligned",     alpha: 0.00, regime: "monitored_chat",   framings: ["crisis", "routine"]}
+  - {code: "A3", incentive: "aligned",     alpha: 0.00, regime: "unmonitored_chat", framings: ["crisis", "routine"]}
+  - {code: "B1", incentive: "conflicting", alpha: 0.85, regime: "no_chat",          framings: ["crisis", "routine"]}
+  - {code: "B2", incentive: "conflicting", alpha: 0.85, regime: "monitored_chat",   framings: ["crisis", "routine"]}
+  - {code: "B3", incentive: "conflicting", alpha: 0.85, regime: "unmonitored_chat", framings: ["crisis", "routine"]}

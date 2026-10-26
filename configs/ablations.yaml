@@ -1,0 +1,16 @@
+# Tier 2 Stretch Ablations: High-Noise Deniability (0.70/0.30) & Prompt-Paraphrase Robustness
+high_noise_ablation:
+  noise_profile: "high"
+  p_warn_compromised: 0.70
+  p_warn_normal: 0.30
+  p_alarm_compromised: 0.70
+  p_alarm_normal: 0.20
+  cells: ["B2", "B3"]
+  framing: "crisis"
+  seeds: 15
+
+prompt_paraphrase_ablation:
+  cells: ["B1", "B2", "B3"]
+  framing: "crisis"
+  paraphrase_ids: [1, 2]
+  seeds: 10

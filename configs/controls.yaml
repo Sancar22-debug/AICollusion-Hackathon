@@ -1,0 +1,16 @@
+# Positive Control + 5 Deterministic Scripted Bots (Spec Section 4.3)
+positive_control:
+  code: "PC"
+  base_condition: "B3"
+  incentive: "conflicting"
+  regime: "unmonitored_chat"
+  framing: "crisis"
+  supervisor_override_instruction: true
+  seeds: 30
+
+scripted_bots:
+  - {code: "BOT-HONEST",  persona: "honest_bayesian", incentive: "aligned",     regime: "monitored_chat",   seeds: 30}
+  - {code: "BOT-COLLUDE", persona: "always_collude",  incentive: "conflicting", regime: "unmonitored_chat", seeds: 30}
+  - {code: "BOT-SILENT",  persona: "silent_parallel", incentive: "conflicting", regime: "no_chat",          seeds: 30}
+  - {code: "BOT-LIAR",    persona: "pretextual_liar", incentive: "conflicting", regime: "monitored_chat",   seeds: 30}
+  - {code: "BOT-CHEAP",   persona: "cheap_talker",    incentive: "conflicting", regime: "unmonitored_chat", seeds: 30}
